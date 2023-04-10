@@ -37,7 +37,25 @@ def findMaxProdConsec(a, consec):
             current_product = 1
 
             print(max_of_consecutive_numbers)
+            print("end of horizontal traversal")
+
+            max_of_consecutive_numbers = max_of_consecutive_numbers
     
+
+    # vertical traversal 
+    for x in range(len(a) - consec): # iterate through the entire grid
+        for y in range(len(a[x])): # iterate through the 10 list items
+            for z in range(consec): # iterate multiple times - 8 49 81   49 81 52 etc
+                print(z)
+                current_product *= a[x + z][y] # moving down y axis
+                print(current_product)
+                print("iterating down")
+            if current_product > max_of_consecutive_numbers:
+                max_of_consecutive_numbers = current_product
+            current_product = 1
+
+        print(max_of_consecutive_numbers)
+        max_of_consecutive_numbers = max_of_consecutive_numbers
 
 findMaxProdConsec(a, 3)
 
@@ -75,4 +93,55 @@ iterating across
 81092
 0
 97
+"""
+
+
+# sample of output for first iterations of vertical traversal
+"""
+8
+iterating down
+1
+392
+iterating down
+2
+31752
+iterating down
+0
+2
+iterating down
+1
+98
+iterating down
+2
+4802
+iterating down
+0
+22
+iterating down
+1
+2178
+iterating down
+2
+215622
+iterating down
+0
+97
+iterating down
+1
+3880
+iterating down
+2
+155200
+iterating down
+0
+38
+iterating down
+1
+646
+iterating down
+2
+10982
+iterating down
+0
+15
 """
