@@ -15,7 +15,38 @@ a = array([
 m = reshape(a,(10,10))
 print(m)
 
-def findNumCombos(a):
-    # use similar logic - push combos into array
-    # iterate to get count
-findNumCombos(a)
+def findNumCombos(a, consec):
+
+    max_of_consecutive_numbers = 0 
+    
+    current_product = 1
+
+    consec = 3
+
+    combos = []
+
+    # horizontal iteration
+    
+    for x in range(len(a)): # iterate through the entire grid
+        for y in range(len(a[x]) - consec): # iterate through the 10 list items - 8 iterations   8 2 22  then  2 22 97 etc
+            for z in range(consec): # iterate through 3 numbs at a time
+                print(z)
+                current_product *= a[x][y+z] # + z for third iterator [0][0] = 8  [0][1] = 2  to get the next number in the third loop
+                print(current_product)
+               
+                
+            if current_product > max_of_consecutive_numbers:
+                max_of_consecutive_numbers = current_product
+            current_product = 1
+
+        print(max_of_consecutive_numbers)
+        print("end of horizontal traversal")
+
+        max_of_consecutive_numbers = max_of_consecutive_numbers
+        # count how many times "iterating across" appears
+
+        print("num of times iterating across appears")
+        #print(len(combos))
+
+
+findNumCombos(a, 3)

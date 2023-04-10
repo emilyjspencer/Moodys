@@ -36,10 +36,10 @@ def findMaxProdConsec(a, consec):
                 max_of_consecutive_numbers = current_product
             current_product = 1
 
-            print(max_of_consecutive_numbers)
-            print("end of horizontal traversal")
+        print(max_of_consecutive_numbers)
+        print("end of horizontal traversal")
 
-            max_of_consecutive_numbers = max_of_consecutive_numbers
+        max_of_consecutive_numbers = max_of_consecutive_numbers
     
 
     # vertical traversal 
@@ -70,9 +70,9 @@ def findMaxProdConsec(a, consec):
                 max_of_consecutive_numbers = current_product
             current_product = 1
 
-            print(max_of_consecutive_numbers)
-            print("end of diagonal south east traversal")
-            max_of_consecutive_numbers = max_of_consecutive_numbers
+        print(max_of_consecutive_numbers)
+        print("end of diagonal south east traversal")
+        max_of_consecutive_numbers = max_of_consecutive_numbers
 
     # diagonal traversal south west
     for x in range(len(a) - consec):
@@ -86,15 +86,15 @@ def findMaxProdConsec(a, consec):
                 max_of_consecutive_numbers = current_product
             current_product = 1
            
-            print(max_of_consecutive_numbers)
-            print("end of diagonal south west traversal")
-            max_of_consecutive_numbers = max_of_consecutive_numbers
+        print(max_of_consecutive_numbers)
+        print("end of diagonal south west traversal")
+        max_of_consecutive_numbers = max_of_consecutive_numbers
 
-            print("The answer is ********")
-            print("*************************")
-            print("**********************************")
+        print("The answer is ********")
+        print("*************************")
+        print("**********************************")
     
-            return max_of_consecutive_numbers
+        return max_of_consecutive_numbers
 
 
 
