@@ -14,3 +14,14 @@ Manual calculation
 80 + 80 + 80 + 80 = 320
 
 There are 320 possible combinations of 3 consecutive numbers in any direction
+
+
+
+combos.py file
+
+"End of horizontal traversal" appears 10 times for the loop - 
+since the end of the line is reached ten times
+
+
+end of horizontal traversal
+num of times iterating across appears

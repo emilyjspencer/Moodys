@@ -23,30 +23,47 @@ def findNumCombos(a, consec):
 
     consec = 3
 
-    combos = []
+    times_end_of_row_reached = []
+
+    times_end_of_consecutive_nums_reached = []
 
     # horizontal iteration
     
     for x in range(len(a)): # iterate through the entire grid
         for y in range(len(a[x]) - consec): # iterate through the 10 list items - 8 iterations   8 2 22  then  2 22 97 etc
-            for z in range(consec): # iterate through 3 numbs at a time
+            county = y
+            times_end_of_consecutive_nums_reached.append(county)
+            for z in range(consec): 
                 print(z)
                 current_product *= a[x][y+z] # + z for third iterator [0][0] = 8  [0][1] = 2  to get the next number in the third loop
                 print(current_product)
-               
-                
+                 
             if current_product > max_of_consecutive_numbers:
                 max_of_consecutive_numbers = current_product
             current_product = 1
 
         print(max_of_consecutive_numbers)
         print("end of horizontal traversal")
+        count = "end of horizontal traversal"
+        times_end_of_row_reached.append(count)
 
         max_of_consecutive_numbers = max_of_consecutive_numbers
-        # count how many times "iterating across" appears
+       
 
-        print("num of times iterating across appears")
-        #print(len(combos))
+        print("num of times end of the row is reached")
+        print(len(times_end_of_row_reached))
+        print("number of times end of consecutive numbers reached")
+        print(len(times_end_of_consecutive_nums_reached))
+
+        num_combos = len(times_end_of_row_reached) + len(times_end_of_consecutive_nums_reached)
+        
+        print("Number of combinations for horizontal traversal:")
+        print(num_combos)
+
+        print("Number of combinations for all four directions = num_combos * 4")
+        print(num_combos * 4)
+
+        
 
 
 findNumCombos(a, 3)
