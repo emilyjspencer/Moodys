@@ -19,9 +19,17 @@ There are 320 possible combinations of 3 consecutive numbers in any direction
 
 combos.py file
 
-"End of horizontal traversal" appears 10 times for the loop - 
-since the end of the line is reached ten times
+Run this file to see the total number of combinations
 
+```
+python combos.py
+```
 
-end of horizontal traversal
-num of times iterating across appears
+table.py file
+
+Run this file to see the max product
+
+```
+python table.py
+
+```
