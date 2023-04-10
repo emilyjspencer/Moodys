@@ -16,8 +16,9 @@ Manual calculation
 There are 320 possible combinations of 3 consecutive numbers in any direction
 
 
+# Files
 
-combos.py file
+**combos.py file**
 
 Run this file to see the total number of combinations
 
@@ -25,7 +26,7 @@ Run this file to see the total number of combinations
 python combos.py
 ```
 
-table.py file
+**table.py file**
 
 Run this file to see the max product
 
